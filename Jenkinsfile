@@ -23,8 +23,8 @@ pipeline {
         
         sh "pwd"
         sh "aws s3 cp server.js s3://shannonbucket/server.js"
-         sh "aws cloudformation create-stack --parameters  ParameterKey=KeyName,ParameterValue=ShannonKeyPair --template-url https://s3.amazonaws.com/shannonbucket/Shannon_cloudformation_sample1 --stack-name shannon --capabilities CAPABILITY_IAM --region us-east-1"
-         sh "aws cloudformation wait stack-create-complete --stack-name shannon --region us-east-1"
+         sh "aws cloudformation create-stack --parameters  ParameterKey=KeyName,ParameterValue=ShannonKeyPair --template-url https://s3.amazonaws.com/shannonbucket/Shannon_cloudformation_sample1 --stack-name shannon1 --capabilities CAPABILITY_IAM --region us-east-1"
+         sh "aws cloudformation wait stack-create-complete --stack-name shannon1 --region us-east-1"
       }
     }
 
